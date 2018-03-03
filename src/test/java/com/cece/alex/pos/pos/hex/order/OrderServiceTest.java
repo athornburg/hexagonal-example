@@ -28,7 +28,7 @@ public class OrderServiceTest {
     }
 
     @Test
-    public void shouldLookupPriceOfItem() {
+    public void shouldLookupPriceOfItemAndSave() {
         when(mockPriceClient.getPrice(anyString(), anyInt())).thenReturn(50.0);
         orderService.addItemToOrder(1, new Item("cool thing", 3));
 
