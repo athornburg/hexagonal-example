@@ -2,3 +2,7 @@ include 'checkout'
 include 'order'
 include 'point-of-sale'
 
+include 'checkout:core'
+include 'checkout:endpoint'
+include 'checkout:adapters'
+

@@ -1,6 +1,7 @@
-package com.cece.alex.pos.checkout;
+package com.cece.alex.pos.checkout.endpoint;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
 import org.junit.Before;
 import org.junit.Test;
@@ -45,7 +46,7 @@ public class CheckoutControllerTest {
 
 
         Mockito.verify(mockCheckoutService).getTotal(1);
-        assertThat(new ObjectMapper().readValue(response, FinalOrder.class))
+        Assertions.assertThat(new ObjectMapper().readValue(response, FinalOrder.class))
                 .isEqualTo(expectedOrderTotal);
     }
 }

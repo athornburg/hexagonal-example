@@ -31,7 +31,7 @@ public class CheckoutServiceTest {
 
     @Before
     public void setUp() throws Exception {
-        checkoutService = new CheckoutService(mockCheckoutRepository, mockSubtotalService, mockTaxService);
+        checkoutService = new CheckoutServiceImpl(mockCheckoutRepository, mockSubtotalService, mockTaxService);
     }
 
     @Test
