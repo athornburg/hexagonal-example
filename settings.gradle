@@ -1,0 +1,4 @@
+include 'checkout'
+include 'order'
+include 'point-of-sale'
+

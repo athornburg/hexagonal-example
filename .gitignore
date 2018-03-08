@@ -27,3 +27,6 @@ nbdist/
 /.gradle/
 /out/
 /pos-demo.iml
+/checkout/out/
+/point-of-sale/out/
+/order/out/
