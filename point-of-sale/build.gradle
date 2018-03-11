@@ -1,4 +1,12 @@
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+
 dependencies {
-    compile project(':checkout')
-    compile project(':order')
+    compile project(':checkout:checkout-core')
+    compile project(':checkout:checkout-interfaces')
+    compile project(':order:order-core')
+    compile project(':order:order-interfaces')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
 }
