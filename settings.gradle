@@ -8,5 +8,4 @@ include 'checkout:checkout-interfaces'
 include 'order:order-adapters'
 include 'order:order-core'
 include 'order:order-endpoint'
-include 'order:order-interfaces'
 

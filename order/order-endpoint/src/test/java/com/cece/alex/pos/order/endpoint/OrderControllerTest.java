@@ -1,7 +1,7 @@
 package com.cece.alex.pos.order.endpoint;
 
 import com.cece.alex.order.interfaces.Item;
-import com.cece.alex.order.interfaces.OrderService;
+import com.cece.alex.order.interfaces.OrderPort;
 import come.cece.alex.pos.order.endpoint.OrderController;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,12 +20,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class OrderControllerTest {
 
     @Mock
-    private OrderService mockOrderService;
+    private OrderPort mockOrderPort;
     private MockMvc mockMvc;
 
     @Before
     public void setUp() {
-        OrderController orderController = new OrderController(mockOrderService);
+        OrderController orderController = new OrderController(mockOrderPort);
 
         mockMvc = MockMvcBuilders.standaloneSetup(orderController).build();
     }
@@ -39,6 +39,6 @@ public class OrderControllerTest {
                 "  \"quantity\": 2\n" +
                 "}")).andExpect(status().isOk());
 
-        verify(mockOrderService).addItemToOrder(1, new Item("coffee", 2));
+        verify(mockOrderPort).addItemToOrder(1, new Item("coffee", 2));
     }
 }

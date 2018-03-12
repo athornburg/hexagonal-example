@@ -1,6 +1,5 @@
 dependencies {
     compile project(':order:order-core')
-    compile project(':order:order-interfaces')
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.0.RELEASE'
     testCompile group: 'org.springframework', name: 'spring-test', version: '5.0.4.RELEASE'
     testCompile group: 'org.mockito', name: 'mockito-all', version: '1.9.5'

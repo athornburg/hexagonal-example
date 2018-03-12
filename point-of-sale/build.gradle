@@ -5,8 +5,10 @@ apply plugin: 'io.spring.dependency-management'
 dependencies {
     compile project(':checkout:checkout-core')
     compile project(':checkout:checkout-interfaces')
+    compile project(':checkout:checkout-endpoints')
     compile project(':order:order-core')
-    compile project(':order:order-interfaces')
+    compile project(':order:order-adapters')
+    compile project(':order:order-endpoints')
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

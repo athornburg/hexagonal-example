@@ -1,6 +1,6 @@
 package com.cece.alex.order.interfaces;
 
-public interface PriceClient {
+public interface PricePort {
 
     public double getPrice(String itemName, int quantity);
 }
